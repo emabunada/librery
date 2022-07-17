@@ -20,7 +20,8 @@ class Menus:
     def main_menu(self):
         print('1.  Create a new client ')
         print('2.  Create a new librarian ')
-        print('3.  borrow a book')
-        print('4.  return a book')
+        print('3.  show borrowed books')
+        print('4.  borrow a book')
+        print('5.  return a book')
         print('0.  to exit')
         return input('please enter your choice:  ')

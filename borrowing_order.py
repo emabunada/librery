@@ -9,7 +9,7 @@ class BorrowingOrder:
         self._book_id = book_id
         self._status = status
         self._start_date = datetime.now()
-        self._end_date = datetime.now() + timedelta(days=interval_in_days)
+        self._end_date = datetime.date(datetime.now() + timedelta(days=4))
 
     def set_id(self):
         return str(datetime.now()).replace('-', '').split(' ')[0] + \
@@ -19,10 +19,13 @@ class BorrowingOrder:
         return self._id
 
     def refresh_status(self):
-        if self._end_date >= datetime.date():
-            self._status = 'Active'
-        else:
+        if self._end_date >= datetime.now().date():
+            self._status = 'canceled'
+        elif self._end_date < datetime.now().date():
             self._status = 'Expired'
+
+        else:
+            self._status = 'Active'
 
     def get_status(self):
         return self._status
