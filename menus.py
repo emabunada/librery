@@ -1,5 +1,5 @@
 class Menus:
-    def main_menu(self):
+    def header(self):
         print("""
  __       __  .______   .______          ___      .______     ____    ____         _______.____    ____  _______.___________. _______ .___  ___. 
 |  |     |  | |   _  \  |   _  \        /   \     |   _  \    \   \  /   /        /       |\   \  /   / /       |           ||   ____||   \/   | 
@@ -16,3 +16,11 @@ class Menus:
  \______| /__/     \__\ /________/__/     \__\    |_______/    |__|\__\     |__|         \______| |_______||_______||__|\__\ |_______/           
                                                                                                                                                  
 """)
+
+    def main_menu(self):
+        print('1.  Create a new client ')
+        print('2.  Create a new librarian ')
+        print('3.  borrow a book')
+        print('4.  return a book')
+        print('0.  to exit')
+        return input('please enter your choice:  ')

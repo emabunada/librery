@@ -28,8 +28,11 @@ class Book:
     def get_auther(self):
         return self._auther
 
-    def set_status(self, status):
-        self._status = status
+    def change_status(self):
+        if self._status == 'Active':
+            self._status = 'Inactive'
+        else:
+            self._status = 'Active'
 
     def get_status(self):
         return self._status
